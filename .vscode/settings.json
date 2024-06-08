@@ -1,0 +1,41 @@
+{
+  "editor.scrollBeyondLastColumn": 8,
+  "editor.trimAutoWhitespace": true,
+  "editor.linkedEditing": true,
+
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 80,
+  "editor.rulers": [80],
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#ffffff49"
+  },
+
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.stickyScroll.enabled": true,
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+
+  "[markdown]": {
+    "editor.tabSize": 4
+  },
+
+  "yaml.schemas": {
+    "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+  },
+  "yaml.customTags": [
+    "!ENV scalar",
+    "!ENV sequence",
+    "!relative scalar",
+    "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
+    "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
+    "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
+    "tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify"
+  ]
+}

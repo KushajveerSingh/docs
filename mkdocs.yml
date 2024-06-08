@@ -1,0 +1,105 @@
+site_name: Kushajveer Singh
+site_url: https://kushajveersingh.com/docs/
+site_author: Kushajveer Singh
+site_description: Collection of notes for the stuff I read.
+
+repo_name: KushajveerSingh/docs
+repo_url: https://github.com/KushajveerSingh/docs
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2024 Kushajveer Singh. All rights reserved.
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.follow
+    - navigation.top
+    - navigation.footer
+    - content.action.edit
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/KushajveerSingh
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/kushajveersingh/
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/Kkushaj
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/kushaj/
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/kushaj
+  generator: false
+
+plugins:
+  - git-revision-date-localized
+  - minify:
+      minify_html: true
+  - table-reader:
+      base_path: config_dir
+      data_path: .
+      search_page_directory: true
+      allow_missing_files: false
+  - glightbox
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - attr_list
+  - md_in_html
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+  - pymdownx.tabbed:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      alternate_style: true
+
+  - tables
+  - footnotes
+
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Notes:
+      - index.md
