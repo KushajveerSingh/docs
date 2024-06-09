@@ -103,3 +103,5 @@ markdown_extensions:
 nav:
   - Notes:
       - index.md
+  - TODO:
+      - distributed_computing/distributedsystemscourse_chris_colohan.md
